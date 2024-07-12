@@ -18,5 +18,14 @@ namespace BTBuoi4.Controllers
             }
             return View();
         }
+        public IActionResult checkExistedEmployee(string EmplyeeNo)
+        {
+            var dsNhanVien = new List<string>{"aaaaaa", "bbbbbb", "cccccc"};
+            if (dsNhanVien.Contains(EmplyeeNo))
+            {
+                return Json($"{EmplyeeNo} đã có");
+            }
+            return Json(true);
+        }   
     }
 }
