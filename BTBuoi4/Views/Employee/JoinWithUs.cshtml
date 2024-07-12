@@ -82,4 +82,18 @@
         </div>
     </div>
 </form>
+@section Scripts {
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+    <script>
+        $(document).ready(function () {
+            $("#form1").validate({
+                rules: {
 
+                },
+                messages: {
+
+                }
+            });
+        });
+    </script>
+}

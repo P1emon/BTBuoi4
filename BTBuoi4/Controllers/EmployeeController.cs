@@ -5,7 +5,7 @@ namespace BTBuoi4.Controllers
 {
     public class EmployeeController : Controller
     {
-        public IActionResult Register()
+        public IActionResult JoinWithUs()
         {
             return View();
         }
