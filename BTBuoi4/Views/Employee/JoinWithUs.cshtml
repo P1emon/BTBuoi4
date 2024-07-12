@@ -87,11 +87,13 @@
     <script>
         $(document).ready(function () {
             $("#form1").validate({
-                rules: {
-
+                rules: { 
+                    MaSV: {required: true, minlength:4},
+                    HoTen: {required: true}
                 },
                 messages: {
-
+                    MaSV: { required: "Mã sinh viên không được để trống", minlength: "Mã sinh viên phải có ít nhất 4 ký tự"},
+                    HoTen: { required: "Họ tên không được để trống"}
                 }
             });
         });
