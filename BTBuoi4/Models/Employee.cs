@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.AspNetCore.Mvc;
+using System.ComponentModel.DataAnnotations;
 
 namespace BTBuoi4.Models
 {
@@ -6,7 +7,8 @@ namespace BTBuoi4.Models
     {   
         public int Id { get; set; }
         [Display(Name = "Mã Nhân viên")]
-        [RegularExpression(@"[a-z]{6}", ErrorMessage = "Mã nhân viên phải có 6 ký tự")]
+        //[RegularExpression(@"[a-z]{6}", ErrorMessage = "Mã nhân viên phải có 6 ký tự")]
+        [Remote(action: "checkExistedEmployee", controller: "Employee")]
         public string EmplyeeNo { get; set; }
         [Display(Name = "Họ và tên")]
         [StringLength(100, MinimumLength = 5, ErrorMessage = "Tên phải từ 5 đến 100 ký tự")]
