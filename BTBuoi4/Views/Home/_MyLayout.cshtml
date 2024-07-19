@@ -13,7 +13,23 @@
     <div class="container">
         <header>#HEADER</header>
         <div class="row"
-            <aside class="col-3">#menu</aside>
+            <aside class="col-3">
+                #menu
+                <style>
+                    .menu-item {
+                        background-color: #f0f0f0;
+                        border: 1px solid #e0e0e0;
+                        margin: 5px;
+                        padding: 5px;
+                    }
+                    .menu-item:hover {
+                        background-color: #e0e0e0;
+                    }
+                    li > a{text-decoration: none}
+                    li > a:hover{color:green; font-weight: bolder}
+                </style>
+                @await Html.PartialAsync("_MenuLoai")
+            </aside>
             <div class="col-9">
                 @RenderBody()
             </div>

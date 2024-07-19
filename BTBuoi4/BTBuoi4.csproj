@@ -23,7 +23,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="Views\Shared\_MyLayout.cshtml" />
+    <None Include="Views\Home\_MyLayout.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Areas\Admin\Data\" />
+    <Folder Include="Areas\Admin\Models\" />
   </ItemGroup>
 
 </Project>
