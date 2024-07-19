@@ -223,3 +223,4 @@ C:\Users\Piemon\source\repos\BTBuoi4\BTBuoi4\bin\Debug\net8.0\runtimes\win\lib\n
 C:\Users\Piemon\source\repos\BTBuoi4\BTBuoi4\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Windows.Extensions.dll
 C:\Users\Piemon\source\repos\BTBuoi4\BTBuoi4\obj\Debug\net8.0\BTBuoi4.csproj.AssemblyReference.cache
 C:\Users\Piemon\source\repos\BTBuoi4\BTBuoi4\obj\Debug\net8.0\BTBuoi4.csproj.Up2Date
+C:\Users\Piemon\source\repos\BTBuoi4\BTBuoi4\obj\Debug\net8.0\BTBuoi4.sourcelink.json
