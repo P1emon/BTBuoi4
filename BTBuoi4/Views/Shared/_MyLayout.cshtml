@@ -4,10 +4,28 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
+    <!--Style Area: Start-->
+    <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+    <!--Style Area: End-->
+
 </head>
 <body>
-    <div>
-        @RenderBody()
+    <div class="container">
+        <header>#HEADER</header>
+        <div class="row"
+            <aside class="col-3">#menu</aside>
+            <div class="col-9">
+                @RenderBody()
+            </div>
+        </div>
+        <footer>
+            &copy; Copyright 2024 by Boku&Watashi;
+        </footer>
     </div>
+    <!--Script Area: Start-->
+    <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+    @RenderSection("Scripts", required: false)
+    <!--Script Area: End-->
 </body>
 </html>
