@@ -1,8 +1,3 @@
-﻿
-@{
-    ViewData["Title"] = "Tham gia với chungs tôi";
-}
-
 ﻿<form>
     <h2 class="text-center text-danger">
         Đăng ký Thành viên
@@ -85,11 +80,20 @@
 @section Scripts {
     @await Html.PartialAsync("_ValidationScriptsPartial")
     <script>
+        //Định nghĩa hàm kiểm tra
+        function isGmail(value, element) {
+            let pattern = /^[a-zA-Z0-9]*@@gmail.com$/;
+            return this.optional(element) || pattern.test(value);
+        }
+        //Đăng ký thuộc tính kiểm tra vào jQueryValidate
+        jQuery.validator.addMethod("gmail", isGmail, "Email phải có định dạng gmail.com");
         $(document).ready(function () {
             $("#form1").validate({
                 rules: { 
                     MaSV: {required: true, minlength:4},
                     HoTen: {required: true}
+                    Email: { email: true }
+                    XacNhanEmail: {equalTo: "input[name = 'Email']"}
                 },
                 messages: {
                     MaSV: { required: "Mã sinh viên không được để trống", minlength: "Mã sinh viên phải có ít nhất 4 ký tự"},
